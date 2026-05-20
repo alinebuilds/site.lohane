@@ -135,11 +135,17 @@
             font-size: 1.15rem; 
             line-height: 1.6;
             margin-bottom: 15px;
-            text-align: justify;
+            text-align: left;
+        }
+
+        .about-text a.insta-link {
+            color: var(--terracota);
+            font-weight: 600;
+            text-decoration: none;
         }
 
         .about-image {
-            background-image: url('foto-lohane.png');
+            background-image: url('foto-lohane.jpeg');
             background-size: cover;
             background-position: center;
             background-color: #e5e7eb;
@@ -154,7 +160,7 @@
         .btn-container {
             margin-top: 35px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             width: 100%;
         }
 
@@ -178,6 +184,7 @@
         .btn-contato:hover {
             opacity: 0.9;
             transform: translateY(-2px);
+            text-decoration: none;
         }
 
         /* Seção: Terapia */
@@ -237,12 +244,12 @@
             font-size: 1.15rem; 
             line-height: 1.6;
             margin-bottom: 15px;
-            text-align: justify;
+            text-align: left;
             color: var(--texto-suave);
         }
 
         .act-image {
-            background-image: url('foto-act.png'); 
+            background-image: url('foto-act.jpeg'); 
             background-size: cover;
             background-position: center;
             background-color: #e5e7eb;
@@ -296,6 +303,10 @@
             color: var(--verde-oliva);
             margin-bottom: 8px;
         }
+        
+        .duvida-content p {
+            text-align: left;
+        }
 
         /* Funcionamento / Marcação */
         .funcionamento-grid {
@@ -311,11 +322,12 @@
             color: var(--verde-oliva);
             margin-top: 25px;
             margin-bottom: 5px;
+            text-align: left;
         }
 
         .funcionamento-text p {
             font-size: 1.05rem;
-            text-align: justify;
+            text-align: left;
             color: var(--texto-suave);
             margin-bottom: 10px;
         }
@@ -327,7 +339,7 @@
         }
 
         .funcionamento-image {
-            background-image: url('foto-funcionamento.png'); 
+            background-image: url('foto-funcionamento.jpeg'); 
             background-size: cover;
             background-position: center;
             background-color: #e5e7eb;
@@ -384,7 +396,7 @@
             }
             .about-grid, .act-grid, .funcionamento-grid { 
                 grid-template-columns: 1fr; 
-                text-align: center; 
+                text-align: left; 
             }
             .about-image { 
                 height: 350px; 
@@ -398,17 +410,18 @@
             .funcionamento-image { 
                 height: 350px; 
                 margin-top: 30px; 
+                order: -1; 
             }
             .welcome-title { 
                 font-size: 3rem; 
             }
-            .about-text p, .act-text p, .funcionamento-text p { 
-                text-align: center; 
+            .btn-container {
+                justify-content: center; 
             }
             .duvida-item { 
                 flex-direction: column; 
-                align-items: center; 
-                text-align: center; 
+                align-items: flex-start; 
+                text-align: left; 
             }
         }
     </style>
@@ -431,10 +444,11 @@
     <section id="sobre" class="about-grid">
         <div class="about-image"></div>
         <div class="about-text">
-            <h2 class="welcome-title">Seja bem-vinda(o)!</h2>
-            <p>Me chamo Lohane e sou psicóloga pela Universidade Federal do Ceará. Ao longo da minha formação tive experiências em psicoterapia e em psicologia hospitalar, fui monitora de Bases Neurofisiológicas do Comportamento Humano e de Psicopatologia. Mediei grupos de estudo sobre neuropsicologia, casos clínicos de saúde mental e Terapia de Aceitação e Compromisso (ACT). Minhas principais áreas de estudo são a Análise do Comportamento e a ACT.</p>
-            <p>Enquanto terapeuta eu prezo por um espaço de acolhimento e segurança: para você poder se conhecer, se conectar com suas emoções & experiências, de forma empática e acolhedora.</p>
-            <p><strong>Atendo adolescentes e adultos na modalidade online.</strong></p>
+            <h2 class="welcome-title">Seja bem-vindo(a)!</h2>
+            <p>Oie! Me chamo Lohane Martins e sou psicóloga clínica (CRP 11/25517) formada pela Universidade Federal do Ceará. Meus atendimentos são na modalidade online, para que você pode fazer terapia comigo de qualquer lugar do mundo e com mais flexibilidade para encaixar os encontros na sua rotina.</p>
+            <p><strong>Atendo adultos e adolescentes (a partir dos 14 anos).</strong></p>
+            <p><strong>Meu propósito na psicologia é te ajudar a viver a vida sem estar refém das próprias emoções.</strong></p>
+            <p>Enquanto terapeuta eu prezo por um espaço de acolhimento e segurança para você poder se conhecer e se conectar com suas emoções & experiências, de forma empática e acolhedora, e a partir disso caminhar comigo em direção ao que é importante pra você, sem que os seus medos sejam um impeditivo. E com esse objetivo também crio conteúdos didáticos e educativos sobre emoções e comportamento no meu Instagram <a href="https://www.instagram.com/psicohane/" target="_blank" class="insta-link"><strong>(@psicohane)</strong></a></p>
             <div class="btn-container">
                 <a href="https://api.whatsapp.com/send/?phone=55085986687769&text=Ol%C3%A1%2C+Lohane%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+a+psicoterapia&type=phone_number&app_absent=0" target="_blank" class="btn-contato">
                     <i class="fa-brands fa-whatsapp"></i> Agendar consulta
@@ -446,7 +460,7 @@
     <hr class="divider">
 
     <section id="terapia">
-        <h2 style="text-align: center; margin-bottom: 30px; font-size: 2.5rem;">A terapia é para você que:</h2>
+        <h2 style="text-align: left; margin-bottom: 30px; font-size: 2.5rem;">A terapia é para você que:</h2>
         <div class="terapia-container">
             <div class="terapia-row">
                 <div class="card"><p>Quer viver uma vida sem estar refém dos seus pensamentos e emoções</p></div>
@@ -463,11 +477,11 @@
     <hr class="divider">
 
     <section id="abordagem">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Terapia de Aceitação e Compromisso (ACT)</h2>
+        <h2 style="text-align: left; font-size: 2.5rem; margin-bottom: 20px;">Abordagem</h2>
         <div class="act-grid">
             <div class="act-text">
-                <p>Meu trabalho é baseado na Terapia de Aceitação e Compromisso (ACT). Durante o processo terapêutico, vamos olhar para as suas dificuldades considerando diferentes aspects da sua vida — como sua história pessoal, o contexto em que você vive, suas relações e até fatores biológicos (história de vida, ambiente sociocultural).</p>
-                <p>Em vez de lutar para eliminar pensamentos ou emoções difíceis, o foco da terapia é desenvolver flexibilidade psicológica: aprender a lidar com essas experiências internas de forma mais aberta, para que elas não impeçam você de viver uma vida que faça sentido. Ao longo do processo, buscamos identificar o que realmente importa para você e construir caminhos concretos para se aproximar dessa vida, mesmo na presença de desafios emocionais.</p>
+                <p>Acredito em uma psicologia humana, científica e transformadora. Por isso, guio meu trabalho pela perspectiva das abordagens comportamentais contextuais, em especial a Terapia de Aceitação e Compromisso (ACT) o que me leva a compreender o seu caso de forma individualizada e contextualizada para a sua realidade.</p>
+                <p>Durante o processo terapêutico, vamos olhar para as suas dificuldades considerando diferentes aspectos da sua vida — como sua história pessoal, o contexto em que você vive, suas relações e até fatores biológicos (história de vida, ambiente sociocultural). Em vez de lutar para eliminar pensamentos ou emoções difíceis, o foco da terapia é desenvolver flexibilidade psicológica: aprender a lidar com essas experiências internas de forma mais aberta, para que elas não impeçam você de viver uma vida que faça sentido. Ao longo do processo, buscamos identificar o que realmente importa para você e construir caminhos concretos para se aproximar dessa vida, mesmo na presença de desafios emocionais.</p>
             </div>
             <div class="act-image"></div>
         </div>
@@ -476,41 +490,48 @@
     <hr class="divider">
 
     <section id="duvidas">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px;">Dúvidas Frequentes</h2>
+        <h2 style="text-align: left; font-size: 2.5rem; margin-bottom: 30px;">Dúvidas Frequentes</h2>
         <div class="duvidas-list">
             <div class="duvida-item">
                 <div class="duvida-number">1</div>
                 <div class="duvida-content">
                     <h3>Modalidade</h3>
-                    <p>Os atendimentos são realizados online, pela plataforma Google Meet, em um ambiente seguro e confidencial.</p>
+                    <p>Os atendimentos acontecem de forma online, pelo Google Meet. Para que você se sinta confortável e tenha um espaço seguro de escuta, é importante estar em um local mais reservado, com uma conexão estável de internet e usando seu próprio celular ou computador. Se possível, o uso de fones de ouvido também ajuda na qualidade do som e na privacidade da conversa.</p>
                 </div>
             </div>
             <div class="duvida-item">
                 <div class="duvida-number">2</div>
                 <div class="duvida-content">
                     <h3>Primeiras sessões</h3>
-                    <p>Nas primeiras sessões realizamos uma anamnese e avaliação das suas demandas. O objetivo é compreender melhor seu contexto de vida e definir objetivos terapêuticos que façam sentido para você.</p>
+                    <p>Nas primeiras sessões, vamos conversar sobre sua história, suas dificuldades e o que tem feito você buscar terapia neste momento. Esse processo me ajuda a compreender melhor o seu contexto e, junto com você, construir objetivos que façam sentido para a sua vida.</p>
                 </div>
             </div>
             <div class="duvida-item">
                 <div class="duvida-number">3</div>
                 <div class="duvida-content">
-                    <h3>Desenvolvimento da terapia</h3>
-                    <p>A partir dessa compreensão inicial, elaboramos uma formulação do caso, que orienta o trabalho terapêutico. Ao longo das sessões, buscamos desenvolver novas habilidades psicológicas e construir caminhos mais alinhados com aquilo que é importante para você.</p>
+                    <h3>Como funciona a terapia?</h3>
+                    <p>A partir do que for surgindo nas sessões, elaboramos uma formulação do caso que orienta o trabalho terapêutico. Vamos entendendo padrões, emoções e comportamentos que fazem parte da sua experiência. O processo terapêutico busca ampliar sua consciência, desenvolver novas habilidades emocionais e construir caminhos mais alinhados com quem você deseja ser.</p>
                 </div>
             </div>
             <div class="duvida-item">
                 <div class="duvida-number">4</div>
                 <div class="duvida-content">
-                    <h3>Duração do processo</h3>
-                    <p>Não há um tempo pré-determinado para o término da terapia. O processo acontece no seu ritmo, com foco em desenvolver autonomia e recursos para lidar com os desafios da vida.</p>
+                    <h3>Frequência das sessões</h3>
+                    <p>As sessões têm duração de 50 minutos e, no início do processo, os encontros acontecem semanalmente. Essa frequência é importante para criar vínculo, compreender melhor suas demandas e dar continuidade ao trabalho terapêutico. Com o passar do tempo, a frequência pode ser ajustada para quinzenal, caso isso faça sentido para o seu momento e para os objetivos da terapia.</p>
                 </div>
             </div>
-            <div class="duvida-item centralizado">
+            <div class="duvida-item">
                 <div class="duvida-number">5</div>
                 <div class="duvida-content">
-                    <h3>Atendimento por plano de saúde</h3>
-                    <p>Os atendimentos são exclusivamente particulares, portanto não tenho vínculo direto com convênios. No entanto, emito recibos e toda a documentação necessária para que você possa solicitar o reembolso junto ao seu plano de saúde.</p>
+                    <h3>Duração do processo</h3>
+                    <p>Cada processo terapêutico é único, por isso não existe um tempo exato para a terapia durar. O acompanhamento acontece no seu ritmo, respeitando seu momento e suas necessidades.</p>
+                </div>
+            </div>
+            <div class="duvida-item">
+                <div class="duvida-number">6</div>
+                <div class="duvida-content">
+                    <h3>Reembolso pelo plano de saúde</h3>
+                    <p>Os atendimentos são particulares, o que permite um acompanhamento mais individualizado e sem as limitações dos convênios. Ainda assim, muitos planos de saúde oferecem reembolso para sessões de psicoterapia. Para isso, disponibilizo recibos e a documentação necessária para que você possa solicitar o ressarcimento junto ao seu plano.</p>
                 </div>
             </div>
         </div>
@@ -519,28 +540,21 @@
     <hr class="divider">
 
     <section id="marcacao">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Gostei! Como marcar?</h2>
         <div class="funcionamento-grid">
             <div class="funcionamento-text">
+                <h2 style="text-align: left; font-size: 2.5rem; margin-bottom: 20px;">Gostei! Como marcar?</h2>
                 <p style="font-weight: 600; font-size: 1.15rem; color: var(--terracota); text-transform: uppercase; margin-bottom: 15px;">
                     Será um prazer fazer parte da sua história!
                 </p>
-                
                 <h3>Se essas informações fizeram sentido para você:</h3>
-                <p>Me comunica aqui pelo WhatsApp que te informo os horários disponíveis para iniciarmos seu processo!</p>
+                <p>Me comunica aqui pelo WhatsApp que te informo os valores e os horários disponíveis para iniciarmos seu processo!</p>
                 
-                <h3>Tenho dúvidas!</h3>
-                <p>Me encontro à disposição para esclarecer suas dúvidas ou alguma questão sobre o processo, estou disponível via WhatsApp ou Instagram.</p>
-                
-                <p class="destaque-act">Terapia é autocuidado & comprometimento.</p>
-                <p style="font-style: italic; margin-top: 5px;">
-                    Te agradeço por me considerar nessa jornada de autodescoberta & cura. Saiba que estou aqui para te apoiar nesse processo de viver uma vida com significado e propósito!
-                </p>
-                <p style="margin-top: 15px; font-weight: 600; color: var(--verde-oliva);">
-                    Com carinho,<br>Psicóloga Lohane Martins
-                </p>
+                <div class="btn-container">
+                    <a href="https://api.whatsapp.com/send/?phone=55085986687769&text=Ol%C3%A1%2C+Lohane%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+a+psicoterapia&type=phone_number&app_absent=0" target="_blank" class="btn-contato">
+                        <i class="fa-brands fa-whatsapp"></i> Agendar consulta
+                    </a>
+                </div>
             </div>
-            
             <div class="funcionamento-image"></div>
         </div>
     </section>
